@@ -1,0 +1,33 @@
+{
+  "dataset": "orders",
+  "required_columns": [
+    "order_id",
+    "amount",
+    "status",
+    "updated_at"
+  ],
+  "minimum_rows": 2,
+  "not_null": [
+    "order_id",
+    "updated_at"
+  ],
+  "unique": [
+    "order_id"
+  ],
+  "numeric_ranges": {
+    "amount": [
+      0,
+      10000
+    ]
+  },
+  "allowed_values": {
+    "status": [
+      "completed",
+      "cancelled"
+    ]
+  },
+  "freshness": {
+    "column": "updated_at",
+    "max_age_seconds": 86400
+  }
+}
