@@ -2,7 +2,7 @@ from contextlib import closing
 """Configurable CSV data contracts with persisted quality results."""
 import csv,json,sqlite3,math
 from pathlib import Path
-from datetime import datetime,timezone
+from datetime import datetime,timezone 
 
 def evaluate(file,contract,now=None):
     now=now or datetime.now(timezone.utc)
